@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<head>
+	<link href = "style.css" rel = "stylesheet">
+	<link rel ="icon" href = "pomo_web.png">
+	<title>Planet Timer</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet">
+</head>
+
+
+<body onload = "initial_timer()">
+	<section>
+	<h1 class = "center">Planet Timer</h1>
+</section>
+
+<div id = 'button-cluster'>
+	<!--<button>SETTINGS</button>-->
+	<button onclick = 'countdown(clock_tick)'>START</button>
+	<button onclick = 'timer_pause()'>PAUSE</button>
+	<!--<button>SHOP</button> -->
+</div>
+<section>
+	<p id = "timer" class = "center"></p>
+	<p id = "timer-label" class = "center">Work</p>
+</section>
+
+<div id = "swap">
+	<button onclick="swap_timers()">Swap</button>
+	<button onclick="skip_timer()">Skip</button>
+	<div class = "skip_caution">
+    <p>Skip the current countdown? Press again to confirm.</p>
+  </div>
+</div>
+
+
+<table id = "counter">
+	<thead>
+		<td>Completed</td>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Work</td>
+		<td id = "work_ct"></td>
+	</tr>
+	<tr>
+		<td>Break</td>
+		<td id = "break_ct"></td>
+	</tr>
+</tbody>
+</table>
+
+<div class = planet_container>
+        <div class = "planet-body"></div>
+        <div class = "planet-atm"></div>
+        <img src = pomo_timer_clouds.png alt = clouds id = clouds>
+
+</div>
+<script src = "script.js"></script>
+</body>
